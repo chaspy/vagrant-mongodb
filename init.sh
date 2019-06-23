@@ -17,6 +17,8 @@ sudo ufw allow 22
 sudo ufw allow 27017
 sudo ufw reload
 
+HOSTNAME=$(hostname)
 cp /vagrant/mongod.conf /etc/mongod.conf
+sudo sed -i "s/HOSTNAME/$HOSTNAME/g" /etc/mongod.conf
 
 sudo systemctl start mongod

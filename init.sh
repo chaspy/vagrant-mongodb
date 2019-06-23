@@ -1,2 +1,2 @@
 #!/bin/bash
-sdo apt-get update -y
+sudo apt-get update -y

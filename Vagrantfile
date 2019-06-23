@@ -3,6 +3,11 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/xenial64"
 
+  config.hostmanager.enabled = true
+  config.hostmanager.manage_host = true
+  config.hostmanager.ignore_private_ip = false
+  config.hostmanager.include_offline = false
+
   config.vm.define :mongo0 do | mongo |
     mongo.vm.hostname = "mongo0"
     mongo.vm.network :private_network, ip: "192.168.33.200"#, virtualbox__intnet: "intnet"

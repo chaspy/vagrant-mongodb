@@ -12,3 +12,5 @@
 $ vagrant up
 ```
 
+## Dependency
+- [vagrant-hostmanager](https://github.com/devopsgroup-io/vagrant-hostmanager)

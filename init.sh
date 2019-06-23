@@ -15,3 +15,5 @@ sudo systemctl enable mongod
 # Step3 Adjusting the Firewall
 sudo ufw allow 27017
 sudo ufw reload
+
+cp /vagrant/mongod.conf /etc/mongod.conf

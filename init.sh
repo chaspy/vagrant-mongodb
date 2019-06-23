@@ -13,6 +13,7 @@ sudo systemctl start mongod
 sudo systemctl enable mongod
 
 # Step3 Adjusting the Firewall
+sudo ufw enable
 sudo ufw allow 27017
 sudo ufw reload
 

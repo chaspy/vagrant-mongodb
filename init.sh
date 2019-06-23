@@ -1,6 +1,11 @@
 #!/bin/bash
 sudo apt-get update -y
 
+# To avoid error
+# Failed global initialization: BadValue Invalid or no user locale set.  Please ensure LANG and/or LC_* environment variables are set correctly. locale::facet::_S_create_c_locale name not valid
+# ref: https://www.digitalocean.com/community/questions/how-do-i-access-mongo-shell
+export LC_ALL=C
+
 # ref: https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
 # Step1 Adding the MongoDB Repository
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927

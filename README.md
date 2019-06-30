@@ -10,6 +10,8 @@
 
 ```
 $ vagrant up
+$ vagrant ssh mongo0
+vagrant@mongo0:~$ cat /vagrant/repl.sh | mongo
 ```
 
 ## Dependency

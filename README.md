@@ -11,7 +11,7 @@
 ```
 $ vagrant up
 $ vagrant ssh mongo0
-vagrant@mongo0:~$ cat /vagrant/repl.sh | mongo
+vagrant@mongo0:~$ cat /vagrant/repl.js | mongo
 ```
 
 ## Dependency

@@ -22,8 +22,8 @@ sudo ufw allow 22
 sudo ufw allow 27017
 sudo ufw reload
 
-HOSTNAME=$(hostname)
+IPADDR=$(ip -f inet -o addr show enp0s8|cut -d\  -f 7 | cut -d/ -f 1)
 cp /vagrant/mongod.conf /etc/mongod.conf
-sudo sed -i "s/HOSTNAME/$HOSTNAME/g" /etc/mongod.conf
+sudo sed -i "s/IPADDR/$IPADDR/g" /etc/mongod.conf
 
 sudo systemctl start mongod
